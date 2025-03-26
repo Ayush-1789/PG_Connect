@@ -43,7 +43,7 @@
 }
 
 .nav-link {
-  color: #ffffff;
+  color: #2d3436;
   text-decoration: none;
   font-size: 1.1rem;
   padding: 0.5rem 1rem;
@@ -68,21 +68,24 @@
   width: 80%;
 }
 
-.nav-button {
-  background: #ffffff;
+.nav-link:hover {
   color: #4834d4;
-  padding: 0.7rem 1.5rem;
-  border-radius: 25px;
+}
+
+.nav-button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  background: #4834d4;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
   text-decoration: none;
-  font-weight: bold;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
 }
 
 .nav-button:hover {
-  background: transparent;
-  color: #ffffff;
-  border-color: #ffffff;
+  background: #686de0;
   transform: translateY(-2px);
 }
 

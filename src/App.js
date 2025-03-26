@@ -7,24 +7,30 @@ import ListProperty from './pages/ListProperty';
 import FindRoommate from './pages/FindRoommate';
 import Profile from './pages/Profile';
 import './styles/App.css';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import { AuthProvider } from './context/AuthContext';
 
 function App() {
   return (
-    <Router>
-      <div className="app">
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            {/* Other routes will be added as we create the components */}
-            <Route path="/find-pg" element={<FindPG />} />
-            <Route path="/list-property" element={<ListProperty />} />
-            <Route path="/find-roommate" element={<FindRoommate />} />
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <div className="app">
+          <Navbar />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/find-pg" element={<FindPG />} />
+              <Route path="/list-property" element={<ListProperty />} />
+              <Route path="/find-roommate" element={<FindRoommate />} />
+              <Route path="/profile" element={<Profile />} />
+            </Routes>
+          </main>
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 
